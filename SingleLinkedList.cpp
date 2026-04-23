@@ -27,4 +27,18 @@ public:
         Node *nodeBaru = new Node();
         nodeBaru->naMhs = nim;
 
-       
+        if (START == NULL || nim <= START ->naMhs)
+        {
+            if (START != NULL && nim == START->naMhs)
+            {
+                cout << "\nDuplikasi naMhs tidak diijinkan\n";
+                return;
+            }
+        
+            nodeBaru->next = START;
+            START = nodeBaru;
+            return;
+        }
+
+        Node *previous = START;
+        Node *current = START;
