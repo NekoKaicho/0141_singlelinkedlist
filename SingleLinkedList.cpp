@@ -152,4 +152,43 @@ int main()
                     cout << "\nData dengan Nomor Mahasiswa " << nim << " berhasil dihapus\n";
                 break;
 
+            case '3':
+                mhs.traverse();
+                break;
+            
+            case '4':
+            {
+                if (mhs.listEmpty())
+                {
+                    cout << "\nList Kosong\n";
+                    break;
+                }
+
+                Node *previous, *current;
+                cout << "\nMasukkan Nomor Mahasiswa yang akan dicari: ";
+                cin >> nim;
+
+                if (mhs.search(nim, previous, current) == false)
+                {
+                    cout << "\nData tidak ditemukan\n";
+                }
+                else
+                {
+                    cout << "\nData ditemukan\n";
+                    cout << "NIM Mahasiswa: " << current->naMhs << endl;
+                }
+                break;
+
+                if (mhs.search(nim, previous, current) == false)
+                {
+                    cout << "\nData tidak ditemukan\n";
+                }
+                else
+                {
+                    cout << "\nData ditemukan\n";
+                    cout << "NIM Mahasiswa: " << current->naMhs << endl;
+                }
+                break;
+            }
+
            
