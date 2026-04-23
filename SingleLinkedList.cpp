@@ -191,4 +191,15 @@ int main()
                 break;
             }
 
-           
+            case '5':
+                break;
+
+            default:
+                cout << "\nPilihan tidak valid\n";
+        }
+                
+    } while (ch != '5');
+
+    return 0;
+    
+}
