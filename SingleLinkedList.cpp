@@ -42,3 +42,20 @@ public:
 
         Node *previous = START;
         Node *current = START;
+
+        while (current != NULL && nim > current->naMhs)
+        {
+            if (nim == current->naMhs)
+            {
+                cout << "\nDuplikasi naMhs tidak diijinkan\n";
+                return;
+            }
+            previous = current;
+            current = current->next;
+        }
+
+        nodeBaru->next = current;
+        previous->next = nodeBaru;
+    }
+
+ 
